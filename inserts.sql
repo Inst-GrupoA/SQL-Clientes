@@ -1,6 +1,5 @@
 use CLIENTES;
 
-
 INSERT INTO PROVINCIAS (PRO_NOMBRE) VALUES
 ("Buenos Aires"),
 ("Buenos Aires-GBA"),
@@ -27,6 +26,19 @@ INSERT INTO PROVINCIAS (PRO_NOMBRE) VALUES
 ("Santiago del Estero"),
 ("Tierra del Fuego"),
 ("Tucumán");
+
+INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
+('25 de Mayo',1),
+('3 de febrero',1),
+('A. Alsina',1),
+('A. Gonzáles Cháves',1),
+('Aguas Verdes',1),
+('Alberti',1),
+('Arrecifes',1),
+('Ayacucho',1),
+('Azul',1),
+('Bahía Blanca',1),
+('Balcarce',1);
 
 INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
 ('Rawson', 6),
@@ -204,6 +216,7 @@ INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
 ('Sañogasta', 11),
 ('Las Pampitas', 11);
 
+
 INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
 ('Rosario', 22),
 ('Santa Fe', 22),
@@ -291,10 +304,10 @@ INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
 
 INSERT INTO CLIENTES (CLI_ID, CLI_NOMBRE, CLI_APELLIDO, CLI_CUIT, CLI_DIRECCION, CLI_LOC_ID, CLI_RAZONSOC)
 VALUES 
-    (1, 'Juan', 'Pérez', 20123456789, 'Calle Falsa 123', 1, 'Compañía A'),
-    (2, 'María', 'García', 27345678901, 'Avenida Siempreviva 742', 1, 'Compañía B'),
-    (3, 'Pedro', 'González', 23-987654321, 'Calle Falsa 456', 1, 'Compañía C'),
-    (4, 'Lucía', 'Rodríguez', 30876543210, 'Calle Real 789', 1, 'Compañía D');
+    (1, 'Juan', 'Pérez', '20123456789', 'Calle Falsa 123', '1', 'Compañía A'),
+    (2, 'María', 'García', '27345678901', 'Avenida Siempreviva 742', '1', 'Compañía B'),
+    (3, 'Pedro', 'González', '23987654321', 'Calle Falsa 456', '1', 'Compañía C'),
+    (4, 'Lucía', 'Rodríguez', '30-76543210', 'Calle Real 789', '1', 'Compañía D');
 
 UPDATE CLIENTES SET CLI_NOMBRE = 'Laura', CLI_APELLIDO = 'Fernández' WHERE CLI_ID = 2;
 
@@ -303,6 +316,7 @@ DELETE FROM CLIENTES WHERE CLI_ID = 3;
 SELECT * FROM CLIENTES;
 
 SELECT * FROM provincias;
+SELECT * FROM LOCALIDADES;
 
 SELECT PROVINCIAS.PRO_NOMBRE, LOCALIDADES.LOC_NOMBRE 
 FROM PROVINCIAS 
@@ -310,4 +324,3 @@ JOIN LOCALIDADES ON PROVINCIAS.PRO_ID = LOCALIDADES.LOC_PRO_ID;
 
 
 SELECT * FROM CLIENTES WHERE CLI_ID = 1;
-
