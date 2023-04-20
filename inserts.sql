@@ -130,6 +130,7 @@ INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
 ('El Maitén', 6),
 ('Trevelin', 6);
 
+
 INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
 ('San Salvador de Jujuy', 11),
 ('La Quiaca', 11),
@@ -299,15 +300,19 @@ INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
 ('Santa Rosa de Calchines', 22),
 ('Tostado', 22);
 
-
-
-
 INSERT INTO CLIENTES (CLI_ID, CLI_NOMBRE, CLI_APELLIDO, CLI_CUIT, CLI_DIRECCION, CLI_LOC_ID, CLI_RAZONSOC)
 VALUES 
     (1, 'Juan', 'Pérez', '20123456789', 'Calle Falsa 123', '1', 'Compañía A'),
     (2, 'María', 'García', '27345678901', 'Avenida Siempreviva 742', '1', 'Compañía B'),
     (3, 'Pedro', 'González', '23987654321', 'Calle Falsa 456', '1', 'Compañía C'),
     (4, 'Lucía', 'Rodríguez', '30-76543210', 'Calle Real 789', '1', 'Compañía D');
+
+INSERT INTO CLIENTES (CLI_ID, CLI_NOMBRE, CLI_APELLIDO, CLI_CUIT, CLI_DIRECCION, CLI_LOC_ID, CLI_RAZONSOC)
+VALUES 
+    (1, 'Juan', 'Pérez', '20-12345678-9', 'Calle Falsa 123', 'AR-BA', 'Compañía A'),
+    (2, 'María', 'García', '27-34567890-1', 'Avenida Siempreviva 742', 'AR-C', 'Compañía B'),
+    (3, 'Pedro', 'González', '23-98765432-1', 'Calle Falsa 456', 'AR-B', 'Compañía C'),
+    (4, 'Lucía', 'Rodríguez', '30-87654321-0', 'Calle Real 789', 'AR-C', 'Compañía D');
 
 UPDATE CLIENTES SET CLI_NOMBRE = 'Laura', CLI_APELLIDO = 'Fernández' WHERE CLI_ID = 2;
 
@@ -324,4 +329,3 @@ JOIN LOCALIDADES ON PROVINCIAS.PRO_ID = LOCALIDADES.LOC_PRO_ID;
 
 
 SELECT * FROM CLIENTES WHERE CLI_ID = 1;
-
