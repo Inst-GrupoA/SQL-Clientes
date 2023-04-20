@@ -291,10 +291,10 @@ INSERT INTO LOCALIDADES (LOC_NOMBRE,LOC_PRO_ID) VALUES
 
 INSERT INTO CLIENTES (CLI_ID, CLI_NOMBRE, CLI_APELLIDO, CLI_CUIT, CLI_DIRECCION, CLI_LOC_ID, CLI_RAZONSOC)
 VALUES 
-    (1, 'Juan', 'Pérez', '20-12345678-9', 'Calle Falsa 123', 'AR-BA', 'Compañía A'),
-    (2, 'María', 'García', '27-34567890-1', 'Avenida Siempreviva 742', 'AR-C', 'Compañía B'),
-    (3, 'Pedro', 'González', '23-98765432-1', 'Calle Falsa 456', 'AR-B', 'Compañía C'),
-    (4, 'Lucía', 'Rodríguez', '30-87654321-0', 'Calle Real 789', 'AR-C', 'Compañía D');
+    (1, 'Juan', 'Pérez', 20123456789, 'Calle Falsa 123', 1, 'Compañía A'),
+    (2, 'María', 'García', 27345678901, 'Avenida Siempreviva 742', 1, 'Compañía B'),
+    (3, 'Pedro', 'González', 23-987654321, 'Calle Falsa 456', 1, 'Compañía C'),
+    (4, 'Lucía', 'Rodríguez', 30876543210, 'Calle Real 789', 1, 'Compañía D');
 
 UPDATE CLIENTES SET CLI_NOMBRE = 'Laura', CLI_APELLIDO = 'Fernández' WHERE CLI_ID = 2;
 
